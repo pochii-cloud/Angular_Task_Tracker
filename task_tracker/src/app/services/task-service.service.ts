@@ -35,6 +35,14 @@ export class TaskServiceService {
     task.id=this.tasks.length+1;
     this.tasks.push(task)
   }
-
+  updatetask(task:Task){
+    if(task.id !== 0){
+      let index=this.tasks.findIndex((t_id)=>{
+        t_id.id === task.id
+        this.tasks[index]=task
+        console.log('task updated')
+      })
+    }
+  }
 
 }

@@ -9,7 +9,12 @@ import Task, { TaskServiceService } from 'src/app/services/task-service.service'
   styleUrls: ['./display-tasks.component.css']
 })
 export class DisplayTasksComponent implements OnInit {
-
+   task:Task={
+      id:0,
+      name:'',
+      description:'',
+      status:''
+   }
    tasks:Task[]=[]
 
    constructor(private taskservice:TaskServiceService){
@@ -19,5 +24,9 @@ export class DisplayTasksComponent implements OnInit {
 
    ngOnInit(): void {
      this.tasks=this.taskservice.displaytasks()
+   }
+   updatetask(task:Task){
+    this.task=task
+    this.taskservice.updatetask(task)
    }
 }
