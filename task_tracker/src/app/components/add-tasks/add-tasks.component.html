@@ -1,0 +1,13 @@
+<div class="form">
+    <h2>Add Task</h2>
+    <form class="ngForm" (ngSubmit)="addtask()">
+        <input type="text" placeholder="add_task" name="name" [(ngModel)]="task.name" />
+        <input type="text" placeholder="add description" name="description" [(ngModel)]="task.description"/>
+        <select name="status" [(ngModel)]="task.status">
+            <option>Pending</option>
+            <option>Complete</option>
+        </select>
+        <!-- <input type="text" placeholder="add status" name="status" [(ngModel)]="task.status"/> -->
+        <button type="submit">add task</button>
+    </form>
+</div>

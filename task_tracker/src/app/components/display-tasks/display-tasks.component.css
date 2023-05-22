@@ -1,0 +1,14 @@
+.tasks{
+    background-color: #FEFEFE;
+    width: 100vw;
+}
+.taskcard{
+    width: 20%;
+    margin: 10px;
+    background-color: rgb(197, 181, 181);
+    padding: 10px;
+    border-radius: 5px;
+}
+.taskcardpending{
+    background-color: red;
+}
